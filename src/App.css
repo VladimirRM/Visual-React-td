@@ -25,7 +25,7 @@ input {
   color: whitesmoke;
   margin-left: 10px;
 }
-.enter :hover {
+.enter:hover {
   background: whitesmoke;
   color: #222222;
   cursor: pointer;

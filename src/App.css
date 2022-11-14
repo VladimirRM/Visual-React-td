@@ -11,4 +11,8 @@ input{
   width: 250px;
   border: none;
   border-bottom: 1px solid whitesmoke;
+  background:none;
+  color:white;
+  padding: 0 10px;
+  outline: none;
 }

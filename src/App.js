@@ -3,7 +3,9 @@ import "./App.css";
 
 function App() {
   const [item, setItem] = useState("");
-  const [items, setItems] = useEffect ("");
+  const [items, setItems] = useState (
+    JSON.parse(localStorage.getItem('items')) || []
+  );
 
   return (
     <div className="App">

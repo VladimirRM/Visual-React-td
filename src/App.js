@@ -10,6 +10,11 @@ function App() {
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(items));
   }, [items]);
+const newItem = ()=>{
+  
+}
+
+
   return (
     <div className="App">
       <div className="wrapper">
@@ -18,7 +23,9 @@ function App() {
           placeholder="Enter something"
           onChange={(e) => setItem(e.target.value)}
         />
-        <button className="enter">Enter</button>
+        <button className="enter" onClick={newItem}>
+          Enter
+        </button>
       </div>
     </div>
   );

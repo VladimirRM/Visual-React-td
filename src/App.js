@@ -7,6 +7,9 @@ function App() {
     JSON.parse(localStorage.getItem('items')) || []
   );
 
+  useEffect(()=>{
+   localStorage.setItem('items', JSON.stringify(items))
+  },[items])
   return (
     <div className="App">
       <div className="wrapper">

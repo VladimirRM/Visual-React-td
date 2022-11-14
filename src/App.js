@@ -5,8 +5,8 @@ function App() {
   return (
     <div className="App">
 <div className="wrapper">
-  <input type="text" />
-  <button></button>
+  <input type="text"  placeholder='Enter something'/>
+  <button className='enter'>Enter</button>
 </div>
     </div>
   );

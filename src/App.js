@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
   const [item, setItem] = useState("");
@@ -11,7 +12,7 @@ function App() {
     localStorage.setItem("items", JSON.stringify(items));
   }, [items]);
 const newItem = ()=>{
-  
+  console.log(item);
 }
 
 

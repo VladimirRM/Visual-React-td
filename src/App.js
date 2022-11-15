@@ -52,7 +52,10 @@ else{
       </div>
       {items.map((item,index)=>{
         return(
-          <Draggable key={index}>
+          <Draggable key={index}
+          defaultPosition={item.defaultPos}>
+
+            <div className="todo__item"></div>
 
           </Draggable>
         )

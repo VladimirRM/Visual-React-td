@@ -50,6 +50,13 @@ else{
           Enter
         </button>
       </div>
+      {items.map((item,index)=>{
+        return(
+          <Draggable key={index}>
+
+          </Draggable>
+        )
+      })}
     </div>
   );
 }

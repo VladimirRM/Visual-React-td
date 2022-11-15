@@ -13,8 +13,23 @@ function App() {
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(items));
   }, [items]);
+
+
 const newItem = ()=>{
-  console.log(item);
+if (item.trim() !== ''){
+  const newItem ={
+    id: uuidv4(),
+    item:item,
+    color: randomColor({
+      luminocity:'light',
+    }),
+    defaultPos:{
+      x: -100
+      y: -100
+    }
+
+  }
+}
 }
 
 

@@ -51,7 +51,8 @@ function App() {
           <Draggable key={index} defaultPosition={item.defaultPos}>
             <div className="todo__item" style={{backgroundColor:item.color}}>
               {`${item}`}
-              <button className="delete">X</button>
+              <button className="delete"
+              onClick={()=>{}}>X</button>
             </div>
           </Draggable>
         );

@@ -19,7 +19,7 @@ const newItem = ()=>{
 if (item.trim() !== ''){
   const newItem ={
     id: uuidv4(),
-    item:item,
+    item,
     color: randomColor({
       luminocity:'light',
     }),
@@ -55,7 +55,10 @@ else{
           <Draggable key={index}
           defaultPosition={item.defaultPos}>
 
-            <div className="todo__item"></div>
+            <div className="todo__item">
+              {`${item.item}`}
+              <button></button>
+            </div>
 
           </Draggable>
         )

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import { v4 as uuidv4 } from 'uuid';
-import {randomColor} from 'randomcolor'
+import { v4 as uuidv4 } from "uuid";
+import { randomColor } from "randomcolor";
 import Draggable from "react-draggable";
 
 function App() {
@@ -14,29 +14,25 @@ function App() {
     localStorage.setItem("items", JSON.stringify(items));
   }, [items]);
 
-
-const newItem = ()=>{
-if (item.trim() !== ''){
-  const newItem ={
-    id: uuidv4(),
-    item,
-    color: randomColor({
-      luminocity:'light',
-    }),
-    defaultPos:{
-      x: -100,
-      y: -100
+  const newItem = () => {
+    if (item.trim() !== "") {
+      const newItem = {
+        id: uuidv4(),
+        item,
+        color: randomColor({
+          luminocity: "light",
+        }),
+        defaultPos: {
+          x: -100,
+          y: -100,
+        },
+      };
+      setItems((items) => [...items, newItem]);
+    } else {
+      alert("Enter Something...");
+      setItem("");
     }
-
-  }
-      setItems((items)=>[...items, newItem])
-} 
-else{
-  alert("Enter Something...")
-  setItem('')
-}
-}
-
+  };
 
   return (
     <div className="App">
@@ -50,18 +46,15 @@ else{
           Enter
         </button>
       </div>
-      {items.map((item,index)=>{
-        return(
-          <Draggable key={index}
-          defaultPosition={item.defaultPos}>
-
+      {items.map((item, index) => {
+        return (
+          <Draggable key={index} defaultPosition={item.defaultPos}>
             <div className="todo__item">
               {`${item.item}`}
-              <button></button>
+              <button className="delete">X</button>
             </div>
-
           </Draggable>
-        )
+        );
       })}
     </div>
   );

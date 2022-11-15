@@ -30,3 +30,11 @@ input {
   color: #222222;
   cursor: pointer;
 }
+.todo__item {
+  position: absolute;
+  cursor: move;
+  min-width: 215px;
+  color: #000;
+  padding: 1en;
+  border-radius: 5px;
+}

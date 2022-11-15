@@ -23,8 +23,8 @@ function App() {
           luminocity: "light",
         }),
         defaultPos: {
-          x: -100,
-          y: -100,
+          x: 500,
+          y: -500,
         },
       };
       setItems((items) => [...items, newItem]);
@@ -49,8 +49,8 @@ function App() {
       {items.map((item, index) => {
         return (
           <Draggable key={index} defaultPosition={item.defaultPos}>
-            <div className="todo__item">
-              {`${item.item}`}
+            <div className="todo__item" style={{backgroundColor:item.color}}>
+              {`${item}`}
               <button className="delete">X</button>
             </div>
           </Draggable>

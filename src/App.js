@@ -29,7 +29,8 @@ if (item.trim() !== ''){
     }
 
   }
-}
+      setItems((items)=>[...items, newItem])
+} 
 else{
   alert("Enter Something...")
 }

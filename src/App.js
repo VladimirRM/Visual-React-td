@@ -33,6 +33,7 @@ if (item.trim() !== ''){
 } 
 else{
   alert("Enter Something...")
+  setItem('')
 }
 }
 

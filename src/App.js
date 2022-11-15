@@ -24,11 +24,14 @@ if (item.trim() !== ''){
       luminocity:'light',
     }),
     defaultPos:{
-      x: -100
+      x: -100,
       y: -100
     }
 
   }
+}
+else{
+  alert("Enter Something...")
 }
 }
 

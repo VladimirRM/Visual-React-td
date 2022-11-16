@@ -28,21 +28,22 @@ function App() {
         },
       };
       setItems((items) => [...items, newItem]);
+      setItems("");
     } else {
       alert("Enter Something...");
       setItem("");
     }
   };
 
-  const deleteNode =(id)=>{
-    items.filter((item)=> item.id === id)
-    setItems(items.filter((item)=> item.id === id))
-  }
+  const deleteNode = (id) => {
+    setItems(items.filter((item) => item.id !== id));
+  };
 
   return (
     <div className="App">
       <div className="wrapper">
         <input
+          value={item}
           type="text"
           placeholder="Enter something"
           onChange={(e) => setItem(e.target.value)}
@@ -54,10 +55,11 @@ function App() {
       {items.map((item, index) => {
         return (
           <Draggable key={index} defaultPosition={item.defaultPos}>
-            <div className="todo__item" style={{backgroundColor:item.color}}>
+            <div className="todo__item" style={{ backgroundColor: item.color }}>
               {`${item}`}
-              <button className="delete"
-              onClick={()=>deleteNode(item.id)}>X</button>
+              <button className="delete" onClick={() => deleteNode(item.id)}>
+                X
+              </button>
             </div>
           </Draggable>
         );

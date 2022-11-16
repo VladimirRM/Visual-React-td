@@ -35,7 +35,7 @@ function App() {
   };
 
   const deleteNode =(id)=>{
-    const newArr =
+    const newArr = [...items].filter((item)=> item.id === id)
 
   }
 

@@ -34,6 +34,11 @@ function App() {
     }
   };
 
+  const deleteNode =(id)=>{
+    const newArr =
+
+  }
+
   return (
     <div className="App">
       <div className="wrapper">
@@ -52,7 +57,7 @@ function App() {
             <div className="todo__item" style={{backgroundColor:item.color}}>
               {`${item}`}
               <button className="delete"
-              onClick={()=>{}}>X</button>
+              onClick={()=>deleteNode(item.id)}>X</button>
             </div>
           </Draggable>
         );

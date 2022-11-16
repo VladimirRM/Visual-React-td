@@ -35,8 +35,8 @@ function App() {
   };
 
   const deleteNode =(id)=>{
-    const newArr = [...items].filter((item)=> item.id === id)
-
+    items.filter((item)=> item.id === id)
+    setItems(items.filter((item)=> item.id === id))
   }
 
   return (

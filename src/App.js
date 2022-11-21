@@ -41,7 +41,7 @@ function App() {
   const updatePos = (data, index) => {
     let newArray = [...items];
     newArray[index].defaultPos = { x: data.x, y: data.y };
-    setItems()
+    setItems(newArray)
   };
 
   return (

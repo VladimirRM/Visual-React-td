@@ -44,8 +44,11 @@ function App() {
     setItems(newArray)
   }; 
 
-  const keyPress =()=>{
+  const keyPress =(e)=>{
     const code = e.keyCode || e.which
+    if (code === 13 ){
+      newItem()
+    }
   }
 
   return (

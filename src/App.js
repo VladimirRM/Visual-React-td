@@ -45,7 +45,7 @@ function App() {
   }; 
 
   const keyPress =()=>{
-    
+    const code = e.keyCode || e.which
   }
 
   return (

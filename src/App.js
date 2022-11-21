@@ -38,9 +38,10 @@ function App() {
   const deleteNode = (id) => {
     setItems(items.filter((item) => item.id !== id));
   };
-   const updatePos = ()=>{
-    
-   }
+  const updatePos = (data, index) => {
+    let newArray = [...items];
+    newArray[index].defaultPos ={}
+  };
 
   return (
     <div className="App">
@@ -57,10 +58,12 @@ function App() {
       </div>
       {items.map((item, index) => {
         return (
-          <Draggable key={index} defaultPosition={item.defaultPos}
-          onStop={(_,data)=>{
-            updatePos(data,index)
-          }}
+          <Draggable
+            key={index}
+            defaultPosition={item.defaultPos}
+            onStop={(_, data) => {
+              updatePos(data, index);
+            }}
           >
             <div className="todo__item" style={{ backgroundColor: item.color }}>
               {`${item.item}`}

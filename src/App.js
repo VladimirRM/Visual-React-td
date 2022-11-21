@@ -52,6 +52,7 @@ function App() {
           type="text"
           placeholder="Enter something"
           onChange={(e) => setItem(e.target.value)}
+           onKeyPress={(e)=>keyPress}
         />
         <button className="enter" onClick={newItem}>
           Enter

@@ -42,7 +42,11 @@ function App() {
     let newArray = [...items];
     newArray[index].defaultPos = { x: data.x, y: data.y };
     setItems(newArray)
-  };
+  }; 
+
+  const keyPress =()=>{
+    
+  }
 
   return (
     <div className="App">
@@ -52,7 +56,7 @@ function App() {
           type="text"
           placeholder="Enter something"
           onChange={(e) => setItem(e.target.value)}
-           onKeyPress={(e)=>keyPress}
+           onKeyPress={(e)=>keyPress(e)}
         />
         <button className="enter" onClick={newItem}>
           Enter
